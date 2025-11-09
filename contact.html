@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About IS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="hamburger-menu" id="menuToggle">
+    <img src="assets/hamburger3.png" alt="menu icon">
+  </div>
+  <div class="brand">
+    <img src="assets/tree_logo4.png" alt="Logo" class="logo">
+  </div>
+  <nav class="desktop-nav">
+    <a href="index.html" class="nav-btn">About</a>
+    <a href="blog.html" class="nav-btn">Blog</a>
+    <a href="projects.html" class="nav-btn">Projects</a>
+    <a href="cv.html" class="nav-btn">CV</a>
+    <a href="contact.html" class="nav-btn active">Contact</a>
+  </nav>
+</header>
+
+  <!-- Mobile sidebar -->
+  <nav class="sidebar">
+    <a href="index.html" class="nav-link">About</a>
+    <a href="blog.html" class="nav-link">Blog</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="cv.html" class="nav-link">CV</a>
+    <a href="contact.html" class="nav-link active">Contact</a>
+  </nav>
+<main class="contacts">
+  <section id="contacts">
+    <h1>How can you reach me?</h1>
+    <p>You can email me directly at:</p>
+    <p><a href="mailto:slapalirinej3@gmail.com">slapalirinej3@gmail.com</a></p>
+  </section>
+</main>
+
+
+<footer>
+  <p>© 2025 Irinej Slapal — email above :)</p>
+</footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.querySelector(".sidebar");
+    const overlay = document.querySelector(".sidebar-overlay");
+  
+    menuToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      overlay.classList.toggle("active");
+    });
+  
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  });
+  </script>
+</body>
+</html>
+

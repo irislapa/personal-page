@@ -15,7 +15,7 @@
     <img src="assets/tree_logo4.png" alt="Logo" class="logo">
   </div>
   <nav class="desktop-nav">
-    <a href="index.html" class="nav-btn">About</a>
+    <a href="about.html" class="nav-btn">About</a>
     <a href="blog.html" class="nav-btn">Blog</a>
     <a href="projects.html" class="nav-btn">Projects</a>
     <a href="cv.html" class="nav-btn">CV</a>
@@ -25,13 +25,16 @@
 
   <!-- Mobile sidebar -->
   <nav class="sidebar">
-    <a href="index.html" class="nav-link">About</a>
+    <a href="about.html" class="nav-link">About</a>
     <a href="blog.html" class="nav-link">Blog</a>
     <a href="projects.html" class="nav-link">Projects</a>
     <a href="cv.html" class="nav-link">CV</a>
     <a href="contact.html" class="nav-link active">Contact</a>
   </nav>
-<main class="contacts">
+  
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="contacts">
   <section id="contacts">
     <h1>How can you reach me?</h1>
     <p>You can email me directly at:</p>
@@ -48,7 +51,8 @@
   document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById("menuToggle");
     const sidebar = document.querySelector(".sidebar");
-    const overlay = document.querySelector(".sidebar-overlay");
+    const overlay = document.getElementById('sidebarOverlay');
+    console.log("overlay is:", overlay); this
   
     menuToggle.addEventListener("click", () => {
       sidebar.classList.toggle("active");
